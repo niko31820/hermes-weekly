@@ -6,7 +6,9 @@
 * { box-sizing: border-box; }
 body { margin: 0 auto; max-width: 760px; padding: 0 24px 64px; background: var(--paper); color: var(--ink); font: 18px/1.7 "Segoe UI", "Helvetica Neue", Arial, sans-serif; overflow-wrap: anywhere; }
 header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; border-bottom: 1px solid var(--rule); padding: 20px 0; }
-header > a { font: bold 24px Georgia, "Times New Roman", serif; color: var(--ink); text-decoration: none; }
+.brand { display: flex; flex-direction: column; gap: 2px; }
+.brand > a { font: bold 24px Georgia, "Times New Roman", serif; color: var(--ink); text-decoration: none; }
+.brand-byline { font-size: 0.8rem; line-height: 1.4; color: var(--muted); }
 nav { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; }
 nav a, button { display: inline-flex; align-items: center; min-height: 44px; }
 button { background: transparent; color: var(--ink); border: 1px solid var(--rule); padding: 0 12px; font: inherit; cursor: pointer; }
@@ -25,5 +27,8 @@ article > p:first-of-type, time { color: var(--muted); }
 article ul, main > section { font-size: 0.95rem; }
 li { margin-bottom: 10px; }
 .contents { padding-bottom: 8px; }
+.article-image { margin: 24px 0; }
+.article-image img { display: block; width: 100%; height: auto; max-height: 340px; aspect-ratio: 16 / 10; object-fit: contain; background: var(--paper); border: 1px solid var(--rule); }
+.article-image figcaption { margin-top: 8px; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
 @media (max-width: 420px) { body { padding-inline: 18px; font-size: 17px; } nav { gap: 14px; } }
 @media print { :root { --paper: #fff; --ink: #000; --link: #000; --muted: #444; --rule: #aaa; } button { display: none; } body { max-width: none; font-size: 12pt; } article { break-inside: auto; } h2, h3 { break-after: avoid; } }
